@@ -97,10 +97,10 @@ mock.onPost("/login").reply((config: any) => {
 ```
     
 ## External libraries
-[@react-navigation](https://github.com/react-navigation/react-navigation) # Naviagtion library
-[axios](https://www.npmjs.com/package//axios) #Networking
-[axios-retry](https://www.npmjs.com/package/axios-retry) #Retry helper library for axios
-[lodash](https://www.npmjs.com/package/lodash) #utilty functions
-[moment](https://www.npmjs.com/package/lodash) #Datetime helper
-[react-native-svg](https://www.npmjs.com/package/lodash) #Display svg images
-[axios-mock-adapter](https://www.npmjs.com/package/axios-mock-adapter) #Mock rest api calls
+*[@react-navigation](https://github.com/react-navigation/react-navigation) # Naviagtion library
+*[axios](https://www.npmjs.com/package//axios) #Networking
+*[axios-retry](https://www.npmjs.com/package/axios-retry) #Retry helper library for axios
+*[lodash](https://www.npmjs.com/package/lodash) #utilty functions
+*[moment](https://www.npmjs.com/package/lodash) #Datetime helper
+*[react-native-svg](https://www.npmjs.com/package/lodash) #Display svg images
+*[axios-mock-adapter](https://www.npmjs.com/package/axios-mock-adapter) #Mock rest api calls
