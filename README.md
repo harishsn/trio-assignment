@@ -66,9 +66,9 @@ yarn ios
     
     
 ## Approach
-**Authentication**
-*Auth methods are called from Auth Context
-*Simulated login & signup api calls using **axios-mock-adapter**. with fake delay
+**Authentication**\
+*Auth methods are called from Auth Context\
+*Simulated login & signup api calls using **axios-mock-adapter** with a fake delay of 3 seconds
 
 ```js
 var mock = new MockAdapter(axiosHttp, { delayResponse: 3000 });
@@ -104,3 +104,6 @@ mock.onPost("/login").reply((config: any) => {
 *[moment](https://www.npmjs.com/package/lodash) #Datetime helper\
 *[react-native-svg](https://www.npmjs.com/package/lodash) #Display svg images\
 *[axios-mock-adapter](https://www.npmjs.com/package/axios-mock-adapter) #Mock rest api calls\
+
+
+## Demo
