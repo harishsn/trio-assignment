@@ -1,9 +1,9 @@
 # Trio
 
 >**Login / Sign-Up Form**
-**Keyboard Handling**
-**Navigation Implementation**
-**Mock Authentication**
+**Keyboard Handling**\
+**Navigation Implementation**\
+**Mock Authentication**\
 
 
 # Getting Started
@@ -80,6 +80,18 @@ mock.onPost("/signup").reply((config: any) => {
 mock.onPost("/login").reply((config: any) => {
     ...
 });
+```
+
+*Account details are stored in non-persistant variable locally
+```js
+let users: Array<IUser> = [
+    {
+        id: moment().unix(),
+        name: 'Alex',
+        email: 'alex@yopmail.com',
+        password: 'secret@123'
+    }
+]
 ```
 
 *After successful authentication token & profile is set in Auth Context, Which will be available through out the app.
