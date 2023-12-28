@@ -10,17 +10,13 @@
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-## Step 1: Start the Metro Server
-
-Install dependencies
+## Step 1: Install node dependencies
 
 ```bash
 yarn
 ```
 
-## Step 2: Start the Metro Server
-
-Install pod dependencied
+## Step 2: Install Pods
 
 ```bash
 cd ios && pod install
@@ -67,9 +63,11 @@ yarn ios
     
 ## Approach
 **Authentication**\
-*Auth methods are called from Auth Context\
-*Simulated login & signup api calls using **axios-mock-adapter** with a fake delay of 3 seconds
-
+1. Once user opens app user sees Login screen.\
+2. If user is already registered user will able to login using email and password, else user will navigate to signup screen and register.\
+3. Input fields are validated before passing on.
+4. Login/signup method is called from Auth Context\
+5. Simulated login & signup api calls using **axios-mock-adapter** with a fake delay of 3 seconds\
 ```js
 var mock = new MockAdapter(axiosHttp, { delayResponse: 3000 });
 
@@ -82,7 +80,8 @@ mock.onPost("/login").reply((config: any) => {
 });
 ```
 
-*Account details are stored in non-persistant variable locally
+6. Any errors thrown are gracefully shown prompted to user for couple of seconds.\
+7. Account details are stored in non-persistant variable locally\
 ```js
 let users: Array<IUser> = [
     {
@@ -94,13 +93,13 @@ let users: Array<IUser> = [
 ]
 ```
 
-*After successful authentication token & profile is set in Auth Context, Which will be available through out the app.
+8. After successful authentication a dummy token is generated and token & profile is set in Auth Context, Which will be available through out the app.
 ```js
  const [token, setToken] = useState<string | null>(null);
  const [profile, setProfile] = useState<IProfile | null>(null);
 ```
 
-*In index navigator based on the token status user is either conditionally shown Auth Screens Stack or Main Screen Stack
+9. Once the token is available user is navigated to main screen.
 ```js
 { !token ? 
 	<Stack.Screen name="auth" component={AuthNavigator} /> :
