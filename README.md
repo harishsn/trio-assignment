@@ -112,6 +112,6 @@ let users: Array<IUser> = [
 *[axios](https://www.npmjs.com/package//axios) #Networking\
 *[axios-retry](https://www.npmjs.com/package/axios-retry) #Retry helper library for axios\
 *[lodash](https://www.npmjs.com/package/lodash) #utilty functions\
-*[moment](https://www.npmjs.com/package/lodash) #Datetime helper\
-*[react-native-svg](https://www.npmjs.com/package/lodash) #Display svg images\
+*[moment](https://www.npmjs.com/package/moment) #Datetime helper\
+*[react-native-svg](https://www.npmjs.com/package/react-native-svg) #Display svg images\
 *[axios-mock-adapter](https://www.npmjs.com/package/axios-mock-adapter) #Mock rest api calls\
