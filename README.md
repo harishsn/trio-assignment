@@ -116,6 +116,3 @@ let users: Array<IUser> = [
 *[moment](https://www.npmjs.com/package/lodash) #Datetime helper\
 *[react-native-svg](https://www.npmjs.com/package/lodash) #Display svg images\
 *[axios-mock-adapter](https://www.npmjs.com/package/axios-mock-adapter) #Mock rest api calls\
-
-
-## Demo
